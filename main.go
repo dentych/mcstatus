@@ -77,7 +77,7 @@ func complainOnDiscord(webhookUrl string) error {
 	log.Printf("Discord: Server is UP!")
 
 	marshalled, err := json.Marshal(map[string]string{
-		"content": ":no_entry_sign: Minecraft server is DOWN! :clap:",
+		"content": ":no_entry_sign: Minecraft server is DOWN! :rotating_light:",
 	})
 	if err != nil {
 		return fmt.Errorf("failed to marshal discord message: %w", err)
