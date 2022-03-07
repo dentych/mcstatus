@@ -8,6 +8,7 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"time"
 )
 
 var previousStatus = true
@@ -24,6 +25,7 @@ func main() {
 	}
 
 	for {
+		time.Sleep(10 * time.Second)
 		isUp, err := runCheck(mcServerUri)
 		if err != nil {
 			log.Printf("Failed to run check: %s\n", err)
